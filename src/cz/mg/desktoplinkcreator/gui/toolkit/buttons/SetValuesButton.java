@@ -18,10 +18,6 @@ public class SetValuesButton extends JButton {
     }
         
     public void onActivate(ActionEvent e){
-        menu.show(
-                this,
-                (int)(getLocationOnScreen().getX() + getWidth()),
-                (int)(getLocationOnScreen().getY())
-        );
+        menu.show(this, 0, 0);
     }
 }
