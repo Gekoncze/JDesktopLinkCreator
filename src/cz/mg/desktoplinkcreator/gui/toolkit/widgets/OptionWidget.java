@@ -5,7 +5,7 @@ import cz.mg.desktoplinkcreator.gui.toolkit.Entry;
 import javax.swing.*;
 
 
-public class OptionWidget extends JPanel {
+public class OptionWidget {
     private final String key;
     private final OptionHelper helper;
     private final JLabel label;

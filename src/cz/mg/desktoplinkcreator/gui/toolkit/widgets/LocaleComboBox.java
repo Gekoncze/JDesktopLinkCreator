@@ -21,7 +21,7 @@ public class LocaleComboBox extends HBox {
             this.comboBox.addItem(locale);
         }
         this.add(this.label);
-        this.add(this.comboBox, true);
+        this.add(this.comboBox, true, false);
     }
             
     public String getSelectedLocale(){

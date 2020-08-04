@@ -2,7 +2,6 @@ package cz.mg.desktoplinkcreator.gui;
 
 import cz.mg.collections.map.Map;
 import cz.mg.desktoplinkcreator.File;
-import cz.mg.desktoplinkcreator.Options;
 import cz.mg.desktoplinkcreator.State;
 import cz.mg.desktoplinkcreator.Storage;
 import cz.mg.desktoplinkcreator.config.Info;
@@ -14,6 +13,7 @@ import cz.mg.desktoplinkcreator.gui.toolkit.widgets.OptionWidget;
 import cz.mg.desktoplinkcreator.gui.toolkit.widgets.OptionsContainer;
 import cz.mg.desktoplinkcreator.gui.toolkit.wrappers.HBox;
 import cz.mg.desktoplinkcreator.gui.toolkit.wrappers.VBox;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
@@ -53,9 +53,9 @@ public class MainWindow extends JFrame {
         this.vbox = new VBox(8);
         this.vbox.add(this.actionComboBox);
         this.vbox.add(this.localeComboBox);
-        this.vbox.add(this.optionsContainer, true);
-        this.vbox.add(hbox);
-        
+        this.vbox.add(this.optionsContainer, true, true);
+        this.vbox.add(hbox, true, false);
+
         this.getContentPane().add(vbox);
         pack();
     }

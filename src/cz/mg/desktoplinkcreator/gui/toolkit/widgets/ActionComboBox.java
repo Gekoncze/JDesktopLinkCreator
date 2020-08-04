@@ -21,7 +21,7 @@ public class ActionComboBox extends HBox {
             this.comboBox.addItem("[Desktop Action " + action + "]");
         }
         this.add(this.label);
-        this.add(this.comboBox, true);
+        this.add(this.comboBox, true, false);
     }
             
     public String getSelectedAction(){
