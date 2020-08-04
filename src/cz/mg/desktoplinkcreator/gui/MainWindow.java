@@ -11,6 +11,7 @@ import cz.mg.desktoplinkcreator.gui.toolkit.widgets.*;
 import cz.mg.desktoplinkcreator.gui.toolkit.wrappers.HBox;
 import cz.mg.desktoplinkcreator.gui.toolkit.wrappers.VBox;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
@@ -27,6 +28,12 @@ public class MainWindow extends JFrame {
 
     public MainWindow(){
         this.data = new State();
+
+        try {
+            setIconImage(ImageIO.read(getClass().getResourceAsStream("icon.png")));
+        } catch (Exception e){
+            System.out.println("WARNING: Could not set icon.");
+        }
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setTitle(Info.NAME + " " + Info.VERSION);
