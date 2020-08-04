@@ -12,9 +12,11 @@ public class OptionsGrid extends VBox {
         for(OptionWidget widget : filteredWidgets){
             HBox hbox = new HBox(4);
             hbox.add(widget.getLabel());
-            hbox.add(widget.getEntry(), true, true);
+            hbox.add(widget.getEntry(), true, false);
             if(widget.getButton() != null) hbox.add(widget.getButton());
-            add(hbox, true, true);
+            add(hbox, true, false);
         }
+
+        add(new Dummy(), true, true);
     }
 }

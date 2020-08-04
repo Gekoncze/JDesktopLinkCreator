@@ -7,10 +7,7 @@ import cz.mg.desktoplinkcreator.Storage;
 import cz.mg.desktoplinkcreator.config.Info;
 import cz.mg.desktoplinkcreator.gui.dialog.FileOpenDialog;
 import cz.mg.desktoplinkcreator.gui.dialog.FileSaveDialog;
-import cz.mg.desktoplinkcreator.gui.toolkit.widgets.ActionComboBox;
-import cz.mg.desktoplinkcreator.gui.toolkit.widgets.LocaleComboBox;
-import cz.mg.desktoplinkcreator.gui.toolkit.widgets.OptionWidget;
-import cz.mg.desktoplinkcreator.gui.toolkit.widgets.OptionsContainer;
+import cz.mg.desktoplinkcreator.gui.toolkit.widgets.*;
 import cz.mg.desktoplinkcreator.gui.toolkit.wrappers.HBox;
 import cz.mg.desktoplinkcreator.gui.toolkit.wrappers.VBox;
 
@@ -48,6 +45,7 @@ public class MainWindow extends JFrame {
 
         this.hbox = new HBox(0);
         this.hbox.add(this.loadButton);
+        this.hbox.add(new Dummy(), true, false);
         this.hbox.add(this.saveButton);
 
         this.vbox = new VBox(8);
